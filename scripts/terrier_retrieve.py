@@ -1,14 +1,17 @@
 import pyterrier as pt
 import pandas as pd
 import re
-from argparse import ArgumentParser
+from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 from fugashi import Tagger
 from datasets import load_dataset
 
 STOPWORD_REGEX = re.compile('[!/]')
 
 if __name__ == '__main__':
-    parser = ArgumentParser()
+    parser = ArgumentParser(
+        description="Retrieves documents from an Terrier inverted index.",
+        formatter_class=ArgumentDefaultsHelpFormatter
+        )
     parser.add_argument("dataset_name", help="the dataset containing query_id and query.")
     parser.add_argument("index_filepath", help="the directory including the inverted index.")
     parser.add_argument("output_filepath", help="the filepath at which the result file is created.")

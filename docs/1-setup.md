@@ -82,3 +82,11 @@ $ pip install poetry
 ```bash
 $ poetry install 
 ```
+
+必要なパッケージをインストールしたあとは，以下のようにPythonを実行することで，インストールされたパッケージを参照して利用することができます．
+
+```bash
+$ poetry run python [filepath]
+```
+
+単に`python [filepath]`と実行してもインストールしたパッケージを参照してくれないので気をつけてください．毎回，`poetry run`をつけるのが面倒だと感じる場合には，`poetry shell`を実行しておけば`poetry run`をつける必要はなくなります．

@@ -1,5 +1,5 @@
 import pyterrier as pt
-from argparse import ArgumentParser
+from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 from fugashi import Tagger
 from datasets import load_dataset
 from tqdm import tqdm
@@ -11,7 +11,10 @@ def generate_docno_text(dataset):
         yield {"docno": data['docid'], "text": tokens}
 
 if __name__ == '__main__':
-    parser = ArgumentParser()
+    parser = ArgumentParser(
+        description="Creates an Terrier inverted index.",
+        formatter_class=ArgumentDefaultsHelpFormatter
+        )
     parser.add_argument("dataset_name", help="the document collection name of a dataset to be used for datasets.load_dataset.")
     parser.add_argument("index_filepath", help="the directory in which the inverted index is stored.")
     parser.add_argument("--split", default=None, help="the split of the dataset.")
