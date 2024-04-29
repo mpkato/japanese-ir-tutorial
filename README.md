@@ -1,3 +1,7 @@
+# 日本語情報検索チュートリアル
+
+1. [環境設定](https://github.com/mpkato/japanese-ir-tutorial/blob/main/docs/1-setup.md)
+2. [PyTerrierによる検索](https://github.com/mpkato/japanese-ir-tutorial/blob/main/docs/2-pyterrier.md)
 
 
 ## コーパス中の文書をエンコーディング
@@ -44,10 +48,6 @@ poetry run python -m tevatron.utils.format.convert_result_to_trec \
 ```
 
 ## 評価
-
-```bash
-wget https://huggingface.co/datasets/mpkato/miracl-japanese-small/raw/main/qrels.miracl-v1.0-ja-dev.tsv
-```
 
 ```bash
 poetry run ir_measures qrels.miracl-v1.0-ja-dev.tsv rank.trec nDCG@10 RR
@@ -129,3 +129,4 @@ poetry run ir_measures qrels.miracl-v1.0-ja-dev.tsv ft_rank.trec nDCG@10 RR
 nDCG@10 0.6980
 RR      0.7258
 ```
+

@@ -9,12 +9,13 @@ STOPWORD_REGEX = re.compile('[!/]')
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument("dataset_name")
-    parser.add_argument("split")
-    parser.add_argument("index_filepath")
-    parser.add_argument("output_filepath")
-    parser.add_argument("--wmodel", default="BM25")
-    parser.add_argument("--num_results", default=100)
+    parser.add_argument("dataset_name", help="the dataset containing query_id and query.")
+    parser.add_argument("index_filepath", help="the directory including the inverted index.")
+    parser.add_argument("output_filepath", help="the filepath at which the result file is created.")
+    parser.add_argument("--split", default=None, help="the split of the dataset.")
+    parser.add_argument("--wmodel", default="BM25", help="the name of the weighting model. "
+        "See http://terrier.org/docs/current/javadoc/org/terrier/matching/models/package-summary.html")
+    parser.add_argument("--num_results", default=100, help="the number of documents to be retrieved for each query.")
     args = parser.parse_args()
 
     if not pt.started():
