@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "miracl-japanese-small"
+name = "japanese-ir-tutorial"
 version = "0.1.0"
 description = ""
 authors = ["Makoto P. Kato <mpkato@acm.org>"]
