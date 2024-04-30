@@ -10,7 +10,7 @@ def generate_docno_text(dataset):
         tokens = tagger.parse(data['text'])
         yield {"docno": data['docid'], "text": tokens}
 
-if __name__ == '__main__':
+def main():
     parser = ArgumentParser(
         description="Creates an Terrier inverted index.",
         formatter_class=ArgumentDefaultsHelpFormatter
@@ -33,3 +33,6 @@ if __name__ == '__main__':
     indexref = iter_indexer.index(generate_docno_text(dataset))
     index = pt.IndexFactory.of(indexref)
     print(index.getCollectionStatistics().toString())
+
+if __name__ == '__main__':
+    main()

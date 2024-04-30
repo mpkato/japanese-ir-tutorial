@@ -7,7 +7,7 @@ from datasets import load_dataset
 
 STOPWORD_REGEX = re.compile('[!/]')
 
-if __name__ == '__main__':
+def main():
     parser = ArgumentParser(
         description="Retrieves documents from an Terrier inverted index.",
         formatter_class=ArgumentDefaultsHelpFormatter
@@ -46,3 +46,6 @@ if __name__ == '__main__':
 
     result = bm25.transform(topic_df)
     pt.io.write_results(result, args.output_filepath, format='trec')
+
+if __name__ == '__main__':
+    main()
