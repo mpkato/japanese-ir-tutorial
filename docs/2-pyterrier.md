@@ -84,7 +84,7 @@ options:
 以下のコマンドでBM25による検索結果を得ます（引数`--wmodel`のデフォルト値は`BM25`なので，省略することでBM25を指定しています）：
 
 ```bash
-poetry run python scripts/terrier_retrieve.py \
+$ poetry run python scripts/terrier_retrieve.py \
     mpkato/miracl-japanese-small \
     ./miracl_index \
     ./results/bm25.trec \
@@ -93,7 +93,12 @@ poetry run python scripts/terrier_retrieve.py \
 
 以下のコマンドでTF-IDFによる検索結果を得ます：
 ```bash
-poetry run python scripts/terrier_retrieve.py mpkato/miracl-japanese-small ./miracl_index ./results/tfidf.trec --split dev --wmodel TF_IDF
+$ poetry run python scripts/terrier_retrieve.py \
+    mpkato/miracl-japanese-small \
+    ./miracl_index \
+    ./results/tfidf.trec \
+    --split dev \
+    --wmodel TF_IDF
 ```
 
 検索結果が出力されたら出力フォーマットを確認してみましょう．
