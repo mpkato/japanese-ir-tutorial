@@ -83,6 +83,8 @@ $ pip install poetry
 $ poetry install 
 ```
 
+＊「error: can't find Rust compiler」というエラーがでる場合には，Rustコンパイラをインストールしてください．
+
 必要なパッケージをインストールしたあとは，以下のようにPythonを実行することで，インストールされたパッケージを参照して利用することができます．
 
 ```bash
