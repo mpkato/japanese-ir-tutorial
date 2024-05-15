@@ -8,7 +8,6 @@
 4. [教師あり疎検索](https://github.com/mpkato/japanese-ir-tutorial/blob/main/docs/4-sparse-retrieval.md)
 5. [データセット準備](https://github.com/mpkato/japanese-ir-tutorial/blob/main/docs/5-datasets.md)
 
-
 将来追加する予定：
 - 密検索モデルの中身を変更することでPyTorchの扱いや深層学習について学ぶ
 - 統計的検定を実施する方法について学ぶ
