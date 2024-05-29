@@ -99,7 +99,7 @@ results/dpr.trec
 これまでと同様に評価を行います．BM25やTF-IDFよりも高い性能が得られていることがわかります．
 
 ```bash
-$ poetry run ir_measures qrels.miracl-v1.0-ja-dev.tsv rank.trec nDCG@10 RR
+$ poetry run ir_measures qrels.miracl-v1.0-ja-dev.tsv results/dpr.trec nDCG@10 RR
 ```
 
 ```bash
@@ -163,7 +163,7 @@ $ poetry run python -m tevatron.faiss_retriever \
   --depth 100 \
   --batch_size -1 \
   --save_text \
-  --save_ranking_to results/ft_dpr.txt
+  --save_ranking_to results/ft_dpr.trec
 ```
 
 出力をTRECフォーマットに変換
