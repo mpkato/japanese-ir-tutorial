@@ -163,7 +163,7 @@ $ poetry run python -m tevatron.faiss_retriever \
   --depth 100 \
   --batch_size -1 \
   --save_text \
-  --save_ranking_to results/ft_dpr.trec
+  --save_ranking_to results/ft_dpr.txt
 ```
 
 出力をTRECフォーマットに変換
