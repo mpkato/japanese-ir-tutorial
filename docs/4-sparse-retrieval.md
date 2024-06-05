@@ -100,7 +100,7 @@ SPLADEは単語一致による検索モデルと比べ時間がかかります�
 これまでと同様に評価を行います．追加学習をしていないDPRと同等程度の性能が得られます．
 
 ```bash
-$ poetry run ir_measures qrels.miracl-v1.0-ja-dev.tsv splade.trec nDCG@10 RR
+$ poetry run ir_measures qrels.miracl-v1.0-ja-dev.tsv results/splade.trec nDCG@10 RR
 ```
 
 ```bash
